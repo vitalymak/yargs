@@ -922,7 +922,7 @@ function Yargs (processArgs, cwd, parentRequire) {
 
   self.terminalWidth = function () {
     argsert([], 0)
-    return process.stdout.columns
+    return process.stdout.columns || null
   }
 
   Object.defineProperty(self, 'argv', {
